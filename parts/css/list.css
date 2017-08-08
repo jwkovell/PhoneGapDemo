@@ -1,0 +1,70 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 2em solid #eee;
+  list-style: none;
+}
+
+.list-item a {
+  position: relative;
+  display: block;
+  padding: .5em;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-decoration: none;
+  color: #000;
+}
+
+.list-item span {
+  display: block;
+}
+
+.list-item span.title {
+  font-weight: bold;
+}
+
+.list-item[data-favorite="true"]:before,
+.list-item[data-favorite="false"]:before {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: -2em;
+  width: 2em;
+  padding-top: .25em;
+  content: "\2605";
+  color: #aaa;
+}
+
+.list-item[data-favorite="true"]:before {
+  color: #000;
+}
+
+.list-item span.location {
+  font-style: italic;
+}
+
+.list-item span.time {
+}
+
+
+form .button.favorite {
+  padding: .5em;
+}
+
+form .button.reset {
+  background-color: #ccc;
+  box-shadow: none;
+}

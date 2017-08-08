@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Namespace</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/list.css" />
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/list.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <h1 class="title">List</h1>
+  <a class="button" href="index.html">Back</a>
+</div>
+
+<form>
+  <select name="tag">
+    <option value="">- Tag -</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="orange">Orange</option>
+  </select>
+  <select name="category">
+    <option value="">- Category -</option>
+    <option value="activity">Activity</option>
+    <option value="class">Class</option>
+    <option value="meeting">Meeting</option>
+  </select>
+  <select name="day">
+    <option value="">- Day -</option>
+    <option value="1">Monday</option>
+    <option value="2">Tuesday</option>
+    <option value="3">Wednesday</option>
+    <option value="4">Thursday</option>
+    <option value="5">Friday</option>
+    <option value="6">Saturday</option>
+    <option value="0">Sunday</option>
+  </select>
+  <select name="location">
+    <option value="">- Location -</option>
+    <option value="1">Location A</option>
+    <option value="2">Location B</option>
+    <option value="3">Location C</option>
+    <option value="4">Location D</option>
+    <option value="5">Location E</option>
+    <option value="6">Location F</option>
+  </select>
+  <a class="button favorite" data-active="false">&#9733;</a>
+  <a href="list.html?reset=true" class="button reset">Reset</a>
+</form>
+
+<ul class="list">
+  <li
+    class="list-item"
+    data-title="Get LinkedIn: Profile Review"
+    data-start="000000000"
+    data-end="000000000"
+    data-tags="blue,green,orange"
+    data-category="class"
+    data-day="1"
+    data-favorite="true"
+    data-location="1"
+  >
+    <a href="item.html?id=1">
+      <span class="title">Get LinkedIn: Profile Review</span>
+      <span class="location">Location 1</span>
+      <span class="time">Mon 6:00 PM - 8:00 PM</span>
+    </a>
+  </li>
+  <li
+    class="list-item"
+    data-title="Board Governance Committee"
+    data-start="000000000"
+    data-end="000000000"
+    data-tags="blue"
+    data-category="meeting"
+    data-day="2"
+    data-favorite="true"
+    data-location="2"
+  >
+    <a href="item.html?id=2">
+      <span class="title">Board Governance Committee</span>
+      <span class="location">Location 2</span>
+      <span class="time">Tue 7:00 PM - 8:00 PM</span>
+    </a>
+  </li>
+  <li
+    class="list-item"
+    data-title="English Conversation Group"
+    data-start="000000000"
+    data-end="000000000"
+    data-tags="green"
+    data-category="class"
+    data-day="3"
+    data-favorite="false"
+    data-location="3"
+  >
+    <a href="item.html?id=3">
+      <span class="title">English Conversation Group</span>
+      <span class="location">Location 3</span>
+      <span class="time">Wed 7:00 PM - 8:30 PM</span>
+    </a>
+  </li>
+  <li
+    class="list-item"
+    data-title="Walk Worthington: Walk and Talk"
+    data-start="000000000"
+    data-end="000000000"
+    data-tags="orange"
+    data-category="activity"
+    data-day="4"
+    data-favorite="true"
+    data-location="4"
+  >
+    <a href="item.html?id=4">
+      <span class="title">Walk Worthington: Walk and Talk</span>
+      <span class="location">Location 4</span>
+      <span class="time">Thu 6:00 PM - 7:00 PM</span>
+    </a>
+  </li>
+</ul>
+
+</body>
+</html>

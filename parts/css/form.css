@@ -1,0 +1,33 @@
+form {
+  background: #cccccc;
+  background: -moz-linear-gradient(top, #cccccc 0%, #aaaaaa 100%);
+  background: -webkit-linear-gradient(top, #cccccc 0%,#aaaaaa 100%);
+  background: linear-gradient(to bottom, #cccccc 0%,#aaaaaa 100%);
+  padding: .25em;
+}
+
+form:before, form:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+form select {
+  -webkit-appearance: none;
+  font-size: 100%;
+  display: block;
+  float: left;
+  padding: .5em;
+  margin: .25em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  border: none;
+  line-height: 1em;
+  box-shadow: 0 0 .25em rgba(0, 0, 0, .5);
+}
+
+form .button {
+  float: left;
+  margin: .25em;
+}

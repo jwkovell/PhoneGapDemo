@@ -1,0 +1,30 @@
+.header {
+  position: relative;
+  background-color: #000;
+  text-align: center;
+  margin: 0;
+  padding: .5em;
+}
+
+.header:before, .header:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.header .title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+.header .button {
+  float: left;
+  position: relative;
+  padding: .5em 1em;
+}
