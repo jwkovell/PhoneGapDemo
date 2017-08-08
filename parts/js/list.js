@@ -173,42 +173,39 @@ function filterByFavorite(items) {
 
 function filterItems(items, filter){
 
+  // Update local storage.
+  localStorage.setItem('filterTag', filter.tag);
+  localStorage.setItem('filterCategory', filter.category);
+  localStorage.setItem('filterDay', filter.day);
+  localStorage.setItem('filterLocation', filter.location);
+  localStorage.setItem('filterFavorite', filter.favorite);
+
   // If tag was provided...
   if (filter.tag) {
-    // Update local storage.
-    localStorage.setItem('filterTag', filter.tag);
     // Filter by tag.
     filterByTag(items, filter.tag);
   }
 
   // If category was provided...
   if (filter.category) {
-    // Update local storage.
-    localStorage.setItem('filterCategory', filter.category);
     // Filter by category.
     filterByCategory(items, filter.category);
   }
 
   // If day was provided...
   if (filter.day) {
-    // Update local storage.
-    localStorage.setItem('filterDay', filter.day);
     // Filter by day.
     filterByDay(items, filter.day);
   }
 
   // If location was provided...
   if (filter.location) {
-    // Update local storage.
-    localStorage.setItem('filterLocation', filter.location);
     // Filter by day.
     filterByLocation(items, filter.location);
   }
 
   // If favorite was selected...
   if (filter.favorite) {
-    // Update local storage.
-    localStorage.setItem('filterFavorite', true);
     // Filter by favorite.
     filterByFavorite(items);
   }

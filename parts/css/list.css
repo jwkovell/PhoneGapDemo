@@ -36,14 +36,15 @@
 
 .list-item[data-favorite="true"]:before,
 .list-item[data-favorite="false"]:before {
-  display: block;
   position: absolute;
-  text-align: center;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
   top: 0;
-  bottom: 0;
-  left: -2em;
-  width: 2em;
-  padding-top: .25em;
+  left: -1.5em;
+  font-size: 150%;
+  text-align: center;
   content: "\2605";
   color: #aaa;
 }

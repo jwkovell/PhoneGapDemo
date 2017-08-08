@@ -8,6 +8,9 @@ $(function(){
     pubDate: 1502203927
   }
 
+  var favorites = localStorage.favorites || '0';
+  var favoritesArray = favorites.split(',');
+
   var dateObj = new Date(item.pubDate * 1000);
   var year = dateObj.getFullYear();
   var month = dateObj.getMonth();
@@ -78,16 +81,13 @@ $(function(){
     dayString = 'Sat';
   }
 
-  console.log(year);
-  console.log(month);
-  console.log(date);
-  console.log(hours);
-  console.log(minutes);
-  console.log(seconds);
-  console.log(day);
+  if (favoritesArray.indexOf(itemID) > -1) {
+    $('.favorite').attr('data-active', true);
+  }
+
+  $('.favorite').attr('item-id', itemID);
 
   if (item.title) {
-    $('.header .label').html('Title');
     $('.title .label').html(item.title);
     $('.title .value').html(item.title);
   }
@@ -107,7 +107,28 @@ $(function(){
     $('.details .value').html(item.details);
   }
 
+  $('.header .favorite').click(function(){
+    toggleFavoriteButton(this);
+  });
+
 });
+
+function toggleFavoriteButton(button) {
+
+  var favorites = localStorage.favorites || '0';
+  var favoritesArray = favorites.split(',');
+  
+  if ($(button).attr('data-active') === 'false') {
+    $(button).attr('data-active', true);
+    favoritesArray.push($(button).attr('item-id'));
+  } else {
+    $(button).attr('data-active', false);
+    favoritesArray.splice(favoritesArray.indexOf($(button).attr('item-id')), 1);
+  }
+
+  localStorage.favorites = favoritesArray.join(',');
+
+}
 
 function getItemID() {
 

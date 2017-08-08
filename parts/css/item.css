@@ -6,3 +6,15 @@
 .value {
   display: block;
 }
+
+.header .button.favorite {
+  padding: 0;
+  font-size: 200%;
+  float: right;
+  background-color: transparent;
+  color: #555;
+}
+
+.header .button.favorite[data-active="true"] {
+  color: #fff;
+}
